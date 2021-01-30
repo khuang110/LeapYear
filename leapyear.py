@@ -1,6 +1,11 @@
 if __name__=="__main__":
-    year = input("Enter a year: ")
-    year = int(year)
+    while True:
+        try:
+            year = input("Enter a year: ")
+            year = int(year)
+            break
+        except ValueError:
+            print("Not a valid input!")
     if year % 4 == 0:
         if year % 100 == 0:
            if year % 400 == 0:
